@@ -1,14 +1,12 @@
-
-
 // Assignment code here
 function generatePassword() {
 
   // Password Length
   var passwordLength = parseInt(window.prompt("Enter Password Length (8-128 Characters", ""), 10);
-  while (passwordLength < 8 || passwordLength > 128 || passwordLength === NaN) {
+  while (passwordLength < 8 || passwordLength > 128) {
   var passwordLength = parseInt(window.prompt("Enter Password Length (8-128 Characters", ""), 10);
   }
-  console.log(passwordLength)
+ 
   
   // Included Character Prompts
   var upperCaseConfirm = window.confirm("Would you like to use Uppercase Letters?")    
@@ -73,7 +71,7 @@ function generatePassword() {
         var character = (upperCase + numbers)[Math.floor(Math.random() * (upperCase.length + numbers.length))]
         return character
       }
-    } else if (upperCaseConfirm && specialChar){
+    } else if (upperCaseConfirm && specialCharConfirm){
       var randomCharacter = function() {
         var character = (upperCase + specialChar)[Math.floor(Math.random() * (upperCase.length + specialChar.length))]
         return character
