@@ -3,10 +3,9 @@ function generatePassword() {
 
   // Password Length
   var passwordLength = parseInt(window.prompt("Enter Password Length (8-128 Characters", ""), 10);
-  while (passwordLength < 8 || passwordLength > 128) {
+  while (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
   var passwordLength = parseInt(window.prompt("Enter Password Length (8-128 Characters", ""), 10);
-  }
- 
+  } 
   
   // Included Character Prompts
   var upperCaseConfirm = window.confirm("Would you like to use Uppercase Letters?")    
