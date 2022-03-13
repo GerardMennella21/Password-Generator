@@ -95,12 +95,15 @@ function generatePassword() {
         var character = (specialChar)[Math.floor(Math.random() * (specialChar.length))]
         return character
       }
-    } else {
-      generatePassword()
     }
-    var randomPassword = ""
-    for (var i = 0; i < passwordLength; i++) {
-      randomPassword += randomCharacter();
+    if (randomCharacter === undefined) {
+      var randomPassword = "You need to select at least one character type!"
+    }
+    else {
+      var randomPassword = ""
+      for (var i = 0; i < passwordLength; i++) {
+        randomPassword += randomCharacter();
+      }
     }
     return randomPassword
   }
